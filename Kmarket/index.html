@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>케이마켓::대한민국 1등 온라인 쇼핑몰</title>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <style>
+        /* 초기화 */
+        *{
+            margin: 0;
+            padding: 0;
+            font: normal 12px '고딕';
+        }
+
+        u1, ol{list-style: none;}
+        a {text-decoration: none; color: #111;}
+
+        #wrapper{
+            width: 100%;
+            height: auto;
+        }
+        /* 헤더영역 */
+        header {
+            width: 100%;
+            height: auto;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        header > div{
+            width: 100%;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+
+        header > .top{
+            height: 35px;
+        }
+
+        header > .top > div {
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            text-align: right;
+        }
+
+        header > .top > div > a {
+            display: inline-block;
+            height: 100%;
+            padding: 0 10px;
+            line-height: 33px;
+            border-left: 1px solid #e9e9e9;
+            box-sizing: border-box;
+            color: #646464;
+        }
+
+        header > .top > div > a:last-child {border-right: 1px solid #e9e9e9;}
+
+        header > .top > div > a:hover {
+            color: #333;
+            border-bottom: 1px solid #444;
+        }
+        header > .logo{
+            height: 115px;
+            padding: 0%;
+        }
+        header > .logo > div{
+            position: relative;
+            width: 1200px;
+            height: 100%;
+            margin:0 auto;
+        }
+
+        header > .logo > div > a{
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        header > .logo > div > form {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -185px;
+            margin-top: -22px;
+            display: inline-block;
+            width: 370px;
+            height: 45px;
+        }
+
+        header > .logo > div > form > input {  
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-right: 30px;
+            box-sizing: border-box;
+        }
+        header > .logo > div > form > button {
+            position: absolute;
+            right: 6px;
+            top: 10px;
+            background: #fff;
+            border: none;
+            font-size: 20px;
+            color: #333;
+            outline: none;
+        }
+        header > .menu{
+            height: 46px;
+            background:#f2f2f2;
+            border-bottom: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        header > .menu > div{
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        header > .menu > div > ul:nth-child(1) {
+            float: left;
+        }
+        header > .menu > div > ul:nth-child(2) {
+            float: right;
+        }
+
+        header > .menu > div > ul {
+            display: inline-block;
+            margin-top: 16px;
+        }
+        header > .menu > div > ul > li {
+            display: inline-block;
+            right: 6px;
+            top: 100%;
+            padding: 0 10px;
+            line-height: 10px;
+            border-right: 1px solid #e9e9e9;
+        }
+        header > .menu >div > ul:first-child {
+            border-left: 1px solid #e9e9e9;
+        }
+        
+        /* 메인영역 */
+        main {
+            width: 1200px;
+            height: auto;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        main > aside {
+            float: left;
+            width: 215px;
+            height: 100%;
+        } 
+        main > aside > .category {
+            position: relative;
+            width: 100%;
+            height: 425px;
+            background: #333949;
+        }
+        main > aside > .category > li {
+            width: 100%;
+            height: 40px;
+            padding-left: 10px;
+            line-height: 40px;
+            color: #ccc;
+            font-size: 13px;
+            border-bottom: 1px solid #2b313f;
+            box-sizing: border-box;
+        }
+        main > aside > .best {
+            width: 215px;
+            height: auto;
+            border: 1px solid #dbdbdb;
+            box-sizing: border-box;
+            box-shadow: 0 0 5px rgb(55, 55, 5/20%);
+        }
+
+        main > aside > .best > h1 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #111;
+            margin: 6px;
+        }
+
+        main > aside > .best > h1 > i {
+            margin-right: 6px;
+            font-size: 18px;
+        }
+
+        main > aside > .best > ol {
+            width: 100%;
+        }
+
+        main > aside > .best > ol > li {
+            width: 100%;
+            height: 100%;
+            padding: 0 6px;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+        }
+
+        main > aside > .best > ol > li > a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        main > aside > .best > ol > li:first-child > a > .thumb {
+            position: relative;
+            float: none;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        main > aside > .best > ol > li:first-child > a > .thumb > i {
+            position: absolute;
+            left: 0;
+            right: 0;
+            display: inline-block;
+            font-size: 16px;
+            padding: 0;
+            color: #ef3e42;
+            border-bottom: 1px solid #ef3e42;
+            font-weight: 500;
+            font-style: italic;
+            text-align: center;
+            line-height: 18px;
+        }
+        /* 푸터영역 */
+
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div>
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                    <a href="#">마이페이지</a>
+                    <a href="#"><i class="fas fa-shopping-cart"></i>장바구니</a>
+                </div>
+            </div>
+            <div class="logo">
+                <div>
+                    <a href=""><img src="./img/header_logo.png" alt="로고"></a>
+                    <form action="#">
+                        <input type="text" name="search"/>
+                        <button><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="#">히트상품</a></li>
+                        <li><a href="#">추천상품</a></li>
+                        <li><a href="#">최신상품</a></li>
+                        <li><a href="#">인기상품</a></li>
+                        <li><a href="#">할인상품</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a href="#">쿠폰존</a></li>
+                        <li><a href="#">사용후기</a></li>
+                        <li><a href="#">개인결제</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+        <main>
+            <aside>
+                <ul class="category">
+                    <li><a href="#">카테고리</a></li>
+                    <li><a href="#">패션 의류 뷰티</a></li>
+                    <li><a href="#">가전 디지털</a></li>
+                    <li><a href="#">식품 생필품</a></li>
+                    <li><a href="#">홈 문구 취미</a></li>
+                </ul>
+                <article class="best">
+                    <h1>
+                        <i class="fas fa-crown"></i>베스트상품
+                    </h1>
+                    <ol>
+                        <li><a href="#"></a>
+                            <div class="thumb">
+                                <i>1</i><img src="./img/thumb-popular-item1.jpg" alt="item1">
+                            </div>
+                        </li>
+                        <li><a href="#"></a>2</li>
+                        <li><a href="#"></a>3</li>
+                        <li><a href="#"></a>4</li>
+                        <li><a href="#"></a>5</li>
+                    </ol>
+                </article>
+            </aside>
+            <section class="slider">
+                <section></section>
+
+            </section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
